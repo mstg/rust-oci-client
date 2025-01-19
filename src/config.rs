@@ -46,6 +46,8 @@ pub enum Architecture {
     /// With this field empty
     #[serde(rename = "")]
     None,
+    /// Unknown is mostly used for additional metadata like SBOM/scans
+    Unknown,
 }
 
 /// The name of the operating system which the image is
@@ -88,6 +90,8 @@ pub enum Os {
     /// With this field empty
     #[serde(rename = "")]
     None,
+    /// Unknown is mostly used for additional metadata like SBOM/scans
+    Unknown,
 }
 
 /// An OCI Image is an ordered collection of root filesystem changes
