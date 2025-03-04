@@ -119,6 +119,7 @@ pub struct ConfigFile {
 
     /// The name of the operating system which the image is built to run on.
     /// Validated values are listed in [Go Language document for GOOS](https://golang.org/doc/install/source#environment)
+    #[serde(default = "Os::default")]
     pub os: Os,
 
     /// The execution parameters which SHOULD be used as a base when running a container using the image.
