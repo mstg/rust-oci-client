@@ -114,6 +114,7 @@ pub struct ConfigFile {
 
     /// The CPU architecture which the binaries in this image are
     /// built to run on.
+    #[serde(default = "Architecture::default")]
     pub architecture: Architecture,
 
     /// The name of the operating system which the image is built to run on.
