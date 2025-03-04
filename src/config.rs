@@ -127,6 +127,7 @@ pub struct ConfigFile {
     pub config: Option<Config>,
 
     /// The rootfs key references the layer content addresses used by the image.
+    #[serde(default = "Rootfs::default")]
     pub rootfs: Rootfs,
 
     /// Describes the history of each layer.
